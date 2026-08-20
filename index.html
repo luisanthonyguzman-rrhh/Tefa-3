@@ -645,82 +645,91 @@
            BOTONES
         ========================= */
 
-        const yesButton =
-            document.getElementById("yesButton");
+      const yesButton =
+    document.getElementById("yesButton");
 
-        const thinkButton =
-            document.getElementById("thinkButton");
+const thinkButton =
+    document.getElementById("thinkButton");
 
-        const response =
-            document.getElementById("response");
+const response =
+    document.getElementById("response");
 
+const GOOGLE_SCRIPT_URL =
+    "https://script.google.com/macros/s/AKfycbwUlvKOkMvWBCGusNg-su5cVCMzpzFcR5up_lcBRma8QfMem5VMuOBYvY4dYj6WWOI/exec";
 
-        /* =========================
-           SÍ, VAMOS
-        ========================= */
+function guardarRespuesta(respuesta) {
 
-        yesButton.addEventListener(
-            "click",
-            function () {
+    const url =
+        GOOGLE_SCRIPT_URL +
+        "?respuesta=" +
+        encodeURIComponent(respuesta);
 
-                response.style.display = "block";
-
-                response.innerHTML = `
-
-                    <h2>
-                        Entonces tenemos una cita ♡
-                    </h2>
-
-                    <p>
-                        Me alegra que hayas dicho que sí.
-                        Ahora solo falta esperar al sábado.
-                        Prometo que la vamos a pasar muy bien.
-                    </p>
-
-                `;
-
-                response.scrollIntoView({
-                    behavior: "smooth",
-                    block: "nearest"
-                });
-
-            }
-        );
+    // Enviar la respuesta a Google Sheets
+    const imagen = new Image();
+    imagen.src = url + "&t=" + Date.now();
+}
 
 
-        /* =========================
-           DÉJAME PENSARLO
-        ========================= */
+yesButton.addEventListener(
+    "click",
+    function () {
 
-        thinkButton.addEventListener(
-            "click",
-            function () {
+        guardarRespuesta("Sí, vamos ♡");
 
-                response.style.display = "block";
+        response.style.display = "block";
 
-                response.innerHTML = `
+        response.innerHTML = `
 
-                    <h2>
-                        Está bien :)
-                    </h2>
+            <h2>
+                Entonces tenemos una cita ♡
+            </h2>
 
-                    <p>
-                        Piénsalo con calma...
-                        aunque espero que al final
-                        te animes a ir conmigo.
-                    </p>
+            <p>
+                Me alegra que hayas dicho que sí.
+                Ahora solo falta esperar al sábado.
+                Prometo que la vamos a pasar muy bien.
+            </p>
 
-                `;
+        `;
 
-                response.scrollIntoView({
-                    behavior: "smooth",
-                    block: "nearest"
-                });
+        response.scrollIntoView({
+            behavior: "smooth",
+            block: "nearest"
+        });
 
-            }
-        );
+    }
+);
 
-    </script>
+
+thinkButton.addEventListener(
+    "click",
+    function () {
+
+        guardarRespuesta("Déjame pensarlo");
+
+        response.style.display = "block";
+
+        response.innerHTML = `
+
+            <h2>
+                Está bien :)
+            </h2>
+
+            <p>
+                Piénsalo con calma...
+                aunque espero que al final
+                te animes a ir conmigo.
+            </p>
+
+        `;
+
+        response.scrollIntoView({
+            behavior: "smooth",
+            block: "nearest"
+        });
+
+    }
+);
 
 
 </body>
