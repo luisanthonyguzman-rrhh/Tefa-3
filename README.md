@@ -1,15 +1,15 @@
-
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Para Tefa ♡</title>
+    <title>Una propuesta para Tefa</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
     <style>
 
@@ -24,464 +24,546 @@
         }
 
         body {
-            font-family: 'Baloo 2', cursive;
-            background: #fff8f1;
-            color: #302728;
+            font-family: 'DM Sans', sans-serif;
+            background: #111614;
+            color: #f5f1e8;
             overflow-x: hidden;
         }
 
-        /
-        body::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            background-image:
-                radial-gradient(#f5a6b8 1px, transparent 1px),
-                radial-gradient(#f5a6b8 1px, transparent 1px);
-            background-size: 35px 35px;
-            background-position: 0 0, 17px 17px;
-            opacity: 0.08;
-            pointer-events: none;
-            z-index: -1;
+        /* ================================
+           VARIABLES
+        ================================= */
+
+        :root {
+            --green: #173c35;
+            --green-light: #28594e;
+            --cream: #f5f1e8;
+            --orange: #e68a55;
+            --dark: #111614;
+            --gray: #a9aaa4;
         }
 
-        /
 
-        .heart {
-            position: absolute;
-            color: #f06c87;
-            animation: floating 3s ease-in-out infinite;
-            user-select: none;
-        }
-
-        .heart.one {
-            top: 120px;
-            left: 7%;
-            font-size: 35px;
-        }
-
-        .heart.two {
-            top: 250px;
-            right: 8%;
-            font-size: 25px;
-            animation-delay: 1s;
-        }
-
-        .heart.three {
-            top: 550px;
-            left: 10%;
-            font-size: 28px;
-            animation-delay: 1.5s;
-        }
-
-        .heart.four {
-            top: 700px;
-            right: 12%;
-            font-size: 40px;
-            animation-delay: .5s;
-        }
-
-        @keyframes floating {
-            0%, 100% {
-                transform: translateY(0) rotate(-5deg);
-            }
-
-            50% {
-                transform: translateY(-12px) rotate(5deg);
-            }
-        }
-
-        /* =========================
+        /* ================================
            HERO
-        ========================= */
+        ================================= */
 
         .hero {
             min-height: 100vh;
-            padding: 55px 20px 80px;
+            position: relative;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
-            position: relative;
-        }
-
-        .top-decoration {
-            font-size: 28px;
-            letter-spacing: 10px;
-            margin-bottom: 20px;
-        }
-
-        .small-text {
-            color: #e86d88;
-            font-size: 20px;
-            font-weight: 700;
-        }
-
-        .name {
-            font-family: 'Pacifico', cursive;
-            font-size: clamp(55px, 12vw, 110px);
-            color: #ec6682;
-            line-height: 1;
-            text-shadow: 4px 4px 0 #ffd5dd;
-            margin: 5px 0 20px;
-        }
-
-        .question {
-            max-width: 850px;
-            font-size: clamp(30px, 5vw, 55px);
-            line-height: 1.08;
-            font-weight: 700;
-        }
-
-        .question strong {
-            color: #ec6682;
-            font-size: 1.2em;
-        }
-
-        .date {
-            margin-top: 18px;
-            font-size: 25px;
-            color: #756365;
-        }
-
-        /* =========================
-           FOTOS POLAROID
-        ========================= */
-
-        .polaroid {
-            background: white;
-            padding: 12px 12px 25px;
-            box-shadow: 0 12px 30px rgba(80, 45, 45, .15);
-            transition: .4s;
-            position: relative;
-        }
-
-        .polaroid:hover {
-            transform: rotate(0deg) scale(1.04) !important;
-        }
-
-        .polaroid img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .polaroid::before {
-            content: "";
-            position: absolute;
-            top: -13px;
-            left: 50%;
-            transform: translateX(-50%) rotate(-2deg);
-            width: 90px;
-            height: 25px;
-            background: #f6b2bd;
-            opacity: .8;
-        }
-
-        .photo-label {
-            margin-top: 8px;
-            font-size: 17px;
-            color: #ec6682;
-        }
-
-        .hero-photos {
-            width: min(900px, 100%);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 50px;
-            gap: 30px;
-        }
-
-        .hero-photos .polaroid {
-            width: 240px;
-            height: 285px;
-        }
-
-        .hero-photos .polaroid:first-child {
-            transform: rotate(-6deg);
-        }
-
-        .hero-photos .polaroid:last-child {
-            transform: rotate(6deg);
-        }
-
-        /* =========================
-           GATO
-        ========================= */
-
-        .cat {
-            font-size: 80px;
-            animation: catBounce 2.5s ease-in-out infinite;
-        }
-
-        @keyframes catBounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-15px);
-            }
-        }
-
-        /* =========================
-           RÍO
-        ========================= */
-
-        .river {
-            position: relative;
-            background: #83cfe7;
-            padding: 80px 20px;
+            padding: 80px 25px;
             overflow: hidden;
+
+            background:
+                linear-gradient(
+                    rgba(10, 18, 16, .78),
+                    rgba(10, 18, 16, .88)
+                ),
+                url("img/rio-chilina.jpg");
+
+            background-size: cover;
+            background-position: center;
         }
 
-        .river::before,
-        .river::after {
-            content: "";
-            position: absolute;
-            left: -5%;
-            width: 110%;
-            height: 80px;
-            background: #fff8f1;
-            border-radius: 50%;
-        }
-
-        .river::before {
-            top: -45px;
-        }
-
-        .river::after {
-            bottom: -55px;
-        }
-
-        .river-content {
-            max-width: 1000px;
-            margin: auto;
+        .hero-content {
+            max-width: 900px;
             position: relative;
             z-index: 2;
-            text-align: center;
         }
 
-        .river-title {
-            font-size: clamp(35px, 6vw, 60px);
+        .small-title {
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 13px;
+            color: #d4d1c7;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(60px, 11vw, 120px);
+            line-height: .95;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--orange);
+            font-style: italic;
+        }
+
+        .hero-question {
+            font-size: clamp(22px, 3vw, 34px);
+            line-height: 1.4;
+            color: #eeeae0;
+        }
+
+        .hero-question strong {
             color: white;
-            text-shadow: 3px 3px rgba(55, 100, 120, .2);
         }
 
-        .river-subtitle {
-            color: #315766;
-            font-size: 22px;
-            margin-bottom: 35px;
+        .hero-line {
+            width: 70px;
+            height: 2px;
+            background: var(--orange);
+            margin: 35px auto;
         }
 
-        .river-photo {
-            max-width: 750px;
-            height: 400px;
-            margin: auto;
-            transform: rotate(-1deg);
+        .hero-date {
+            font-size: 16px;
+            letter-spacing: 2px;
+            color: #d1d1cb;
         }
 
-        .river-photo img {
-            border-radius: 3px;
-        }
-
-        .boat {
-            font-size: 80px;
+        .scroll {
             position: absolute;
-            right: 5%;
             bottom: 25px;
-            animation: boat 4s ease-in-out infinite;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12px;
+            letter-spacing: 3px;
+            color: #aaa;
         }
 
-        @keyframes boat {
-            0%, 100% {
-                transform: rotate(-4deg) translateY(0);
-            }
 
-            50% {
-                transform: rotate(4deg) translateY(-10px);
-            }
+        /* ================================
+           INTRO
+        ================================= */
+
+        .intro {
+            padding: 120px 25px;
+            background: var(--cream);
+            color: #1e2824;
         }
 
-        /* =========================
-           IMAGINA ESTO
-        ========================= */
-
-        .section {
-            padding: 100px 20px;
+        .container {
             max-width: 1100px;
             margin: auto;
         }
 
-        .section-title {
-            text-align: center;
-            font-size: clamp(35px, 6vw, 55px);
-            margin-bottom: 50px;
-        }
-
-        .section-title span {
-            color: #ec6682;
-        }
-
-        .reasons {
+        .intro-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .reason {
-            background: #fff;
-            padding: 30px 20px;
-            border-radius: 25px;
-            text-align: center;
-            box-shadow: 0 10px 25px rgba(80, 45, 45, .08);
-            transition: .3s;
-        }
-
-        .reason:hover {
-            transform: translateY(-8px);
-        }
-
-        .reason-icon {
-            font-size: 50px;
-            margin-bottom: 10px;
-        }
-
-        .reason h3 {
-            color: #e96884;
-            font-size: 22px;
-            margin-bottom: 5px;
-        }
-
-        .reason p {
-            color: #76686a;
-            font-size: 17px;
-        }
-
-        /* =========================
-           FOTO GATOS
-        ========================= */
-
-        .cat-section {
-            display: flex;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
             align-items: center;
-            justify-content: center;
-            gap: 60px;
-            flex-wrap: wrap;
         }
 
-        .cat-photo {
-            width: 360px;
-            height: 360px;
-            transform: rotate(4deg);
+        .intro-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(40px, 5vw, 65px);
+            line-height: 1.05;
+            margin-bottom: 25px;
         }
 
-        .cat-message {
-            max-width: 450px;
+        .intro-text h2 span {
+            color: var(--orange);
         }
 
-        .cat-message h2 {
-            font-size: 42px;
-            color: #ec6682;
-            margin-bottom: 15px;
+        .intro-text p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #5c625e;
+            max-width: 500px;
         }
 
-        .cat-message p {
-            font-size: 21px;
-            line-height: 1.5;
-            color: #66585a;
-        }
-
-        /* =========================
-           INVITACIÓN FINAL
-        ========================= */
-
-        .invitation {
-            padding: 110px 20px;
-            background: #ffe0e6;
-            text-align: center;
+        .intro-photo {
+            height: 520px;
             position: relative;
         }
 
-        .invitation h2 {
-            font-size: clamp(40px, 7vw, 65px);
-            margin-bottom: 10px;
+        .intro-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        .invitation h2 span {
-            color: #ec6682;
+        .photo-number {
+            position: absolute;
+            bottom: -15px;
+            left: -15px;
+            background: var(--orange);
+            color: white;
+            padding: 15px 20px;
+            font-size: 13px;
+            letter-spacing: 2px;
         }
 
-        .invitation p {
-            font-size: 23px;
-            color: #69595c;
-            margin-bottom: 35px;
+
+        /* ================================
+           RAFTING
+        ================================= */
+
+        .rafting-section {
+            padding: 120px 25px;
+            background: var(--green);
         }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: auto auto 60px;
+        }
+
+        .section-header small {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #aebdb8;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(42px, 6vw, 70px);
+            margin: 15px 0;
+        }
+
+        .section-header p {
+            color: #b7c3bf;
+            font-size: 18px;
+        }
+
+        .large-photo {
+            height: 550px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .large-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .8s ease;
+        }
+
+        .large-photo:hover img {
+            transform: scale(1.04);
+        }
+
+        .photo-caption {
+            position: absolute;
+            left: 30px;
+            bottom: 30px;
+            background: rgba(10, 18, 16, .75);
+            backdrop-filter: blur(8px);
+            padding: 18px 25px;
+            border-left: 3px solid var(--orange);
+        }
+
+        .photo-caption strong {
+            display: block;
+            font-size: 18px;
+        }
+
+        .photo-caption span {
+            color: #c1c8c4;
+            font-size: 14px;
+        }
+
+
+        /* ================================
+           PLAN
+        ================================= */
+
+        .plan {
+            padding: 120px 25px;
+            background: #151b19;
+        }
+
+        .plan h2 {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 55px;
+            margin-bottom: 70px;
+        }
+
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .plan-card {
+            border: 1px solid #303936;
+            padding: 35px;
+            transition: .3s;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--orange);
+        }
+
+        .plan-icon {
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        .plan-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            margin-bottom: 12px;
+        }
+
+        .plan-card p {
+            color: #a9afac;
+            line-height: 1.7;
+        }
+
+
+        /* ================================
+           CHILINA
+        ================================= */
+
+        .chilina {
+            padding: 120px 25px;
+            background: var(--cream);
+            color: #1d2824;
+        }
+
+        .chilina-grid {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .chilina-photo {
+            height: 550px;
+        }
+
+        .chilina-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .chilina-text small {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #777c77;
+        }
+
+        .chilina-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(45px, 6vw, 70px);
+            line-height: 1;
+            margin: 20px 0 30px;
+        }
+
+        .chilina-text h2 span {
+            color: var(--orange);
+        }
+
+        .chilina-text p {
+            color: #646a66;
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+
+        /* ================================
+           GATOS
+        ================================= */
+
+        .cats {
+            padding: 100px 25px;
+            background: #101513;
+        }
+
+        .cats-content {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .cats-symbol {
+            font-size: 45px;
+            margin-bottom: 20px;
+            filter: grayscale(1);
+        }
+
+        .cats h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .cats p {
+            color: #aeb5b1;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .cats-photo {
+            max-width: 700px;
+            height: 380px;
+            margin: 50px auto 0;
+        }
+
+        .cats-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        /* ================================
+           ÚLTIMA FOTO
+        ================================= */
+
+        .memory {
+            padding: 120px 25px;
+            background: var(--green-light);
+        }
+
+        .memory-container {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .memory h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(40px, 6vw, 65px);
+            margin-bottom: 15px;
+        }
+
+        .memory p {
+            color: #c0ccc8;
+            font-size: 18px;
+            margin-bottom: 50px;
+        }
+
+        .memory-photo {
+            height: 520px;
+        }
+
+        .memory-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        /* ================================
+           FINAL
+        ================================= */
+
+        .final {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 25px;
+            background:
+                linear-gradient(
+                    rgba(10, 15, 13, .90),
+                    rgba(10, 15, 13, .95)
+                ),
+                url("img/rafting.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .final-content {
+            max-width: 800px;
+        }
+
+        .final small {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #b6bbb8;
+        }
+
+        .final h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(45px, 7vw, 75px);
+            margin: 20px 0;
+        }
+
+        .final h2 span {
+            color: var(--orange);
+            font-style: italic;
+        }
+
+        .final p {
+            font-size: 20px;
+            color: #c4c8c5;
+            margin-bottom: 40px;
+        }
+
+
+        /* ================================
+           BOTONES
+        ================================= */
 
         .buttons {
             display: flex;
             justify-content: center;
-            align-items: center;
-            gap: 20px;
+            gap: 15px;
             flex-wrap: wrap;
         }
 
         button {
-            border: none;
             font-family: inherit;
-            font-size: 22px;
-            font-weight: 700;
-            padding: 16px 32px;
-            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 15px 30px;
+            border-radius: 3px;
             cursor: pointer;
             transition: .3s;
         }
 
         .yes {
-            background: #ed6b87;
+            background: var(--orange);
+            border: 2px solid var(--orange);
             color: white;
-            box-shadow: 0 8px 20px rgba(237, 107, 135, .3);
         }
 
         .yes:hover {
-            transform: scale(1.08);
-        }
-
-        .think {
-            background: white;
-            color: #66585a;
-        }
-
-        .think:hover {
+            background: #d87342;
             transform: translateY(-3px);
         }
 
-        /* =========================
-           MENSAJE FINAL
-        ========================= */
+        .maybe {
+            background: transparent;
+            border: 2px solid #777d79;
+            color: white;
+        }
+
+        .maybe:hover {
+            border-color: white;
+        }
+
+
+        /* ================================
+           RESPUESTA
+        ================================= */
 
         #response {
             display: none;
             margin: 40px auto 0;
             max-width: 600px;
-            background: white;
-            border-radius: 30px;
             padding: 30px;
-            box-shadow: 0 15px 35px rgba(80, 45, 45, .12);
-            animation: appear .6s ease;
+            border: 1px solid #59645f;
+            background: rgba(20, 30, 27, .9);
+            animation: appear .5s ease;
         }
 
         #response h3 {
-            color: #ec6682;
-            font-size: 35px;
+            font-family: 'Playfair Display', serif;
+            color: var(--orange);
+            font-size: 32px;
         }
 
         #response p {
-            font-size: 20px;
-            margin: 10px 0 0;
+            margin-top: 10px;
+            color: #c4cbc7;
         }
 
         @keyframes appear {
@@ -496,427 +578,517 @@
             }
         }
 
-        /* =========================
+
+        /* ================================
            FOOTER
-        ========================= */
+        ================================= */
 
         footer {
-            background: #b98d65;
-            color: white;
+            background: #0b0e0d;
             text-align: center;
-            padding: 25px;
-            font-size: 18px;
+            padding: 30px;
+            color: #777d79;
+            font-size: 14px;
         }
 
-        /* =========================
-           CORAZONES QUE CAEN
-        ========================= */
-
-        .falling-heart {
-            position: fixed;
-            top: -20px;
-            font-size: 20px;
-            pointer-events: none;
-            animation: fall linear forwards;
-            z-index: 999;
+        footer span {
+            color: var(--orange);
         }
 
-        @keyframes fall {
-            to {
-                transform: translateY(110vh) rotate(360deg);
-                opacity: 0;
-            }
-        }
 
-        /* =========================
+        /* ================================
            RESPONSIVE
-        ========================= */
+        ================================= */
 
         @media (max-width: 800px) {
 
-            .hero {
-                padding-top: 40px;
+            .intro-grid,
+            .chilina-grid {
+                grid-template-columns: 1fr;
+                gap: 45px;
             }
 
-            .hero-photos {
-                flex-direction: column;
+            .plan-grid {
+                grid-template-columns: 1fr;
             }
 
-            .hero-photos .polaroid {
-                width: 250px;
+            .intro-photo,
+            .chilina-photo {
+                height: 420px;
             }
 
-            .hero-photos .polaroid:last-child {
-                margin-top: 20px;
+            .large-photo {
+                height: 400px;
             }
 
-            .reasons {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .boat {
-                display: none;
-            }
-
-            .river-photo {
-                height: 280px;
+            .memory-photo {
+                height: 400px;
             }
         }
 
         @media (max-width: 500px) {
 
-            .reasons {
-                grid-template-columns: 1fr;
-            }
-
-            .question {
-                font-size: 31px;
-            }
-
-            .name {
+            .hero h1 {
                 font-size: 65px;
             }
 
-            .cat {
-                font-size: 60px;
+            .hero-question {
+                font-size: 21px;
             }
 
-            .cat-photo {
-                width: 300px;
+            .intro-photo,
+            .chilina-photo {
+                height: 350px;
+            }
+
+            .large-photo {
                 height: 300px;
             }
 
-            .section {
-                padding: 70px 20px;
+            .cats-photo {
+                height: 280px;
+            }
+
+            .memory-photo {
+                height: 320px;
+            }
+
+            .plan h2 {
+                font-size: 42px;
             }
         }
 
     </style>
 </head>
 
+
 <body>
 
-    <!-- DECORACIÓN -->
-    <div class="heart one">♡</div>
-    <div class="heart two">♥</div>
-    <div class="heart three">♡</div>
-    <div class="heart four">♥</div>
 
+<!-- ==========================================
+     PORTADA
+=========================================== -->
 
-    <!-- =========================
-         PORTADA
-    ========================= -->
+<section class="hero">
 
-    <section class="hero">
+    <div class="hero-content">
 
-        <div class="top-decoration">
-            🐱 ♡ 🐱 ♡ 🐱
+        <div class="small-title">
+            una propuesta para ti
         </div>
 
-        <div class="small-text">
-            tengo una pequeña propuesta para ti...
-        </div>
+        <h1>
+            Tefa<span>.</span>
+        </h1>
 
-        <div class="name">
-            Tefa ♡
-        </div>
-
-        <div class="question">
+        <div class="hero-question">
 
             ¿Quisieras ir a hacer
 
-            <br>
-
             <strong>rafting</strong>
 
-            <br>
-
             al río Chilina conmigo
-
-            <br>
 
             el día sábado?
 
         </div>
 
-        <div class="date">
-            🌊 Una aventura, tú y yo 🌊
+        <div class="hero-line"></div>
+
+        <div class="hero-date">
+            UNA AVENTURA · UNA TARDE · TÚ Y YO
         </div>
 
+    </div>
 
-        <div class="hero-photos">
+    <div class="scroll">
+        ↓ DESLIZA
+    </div>
 
-            <!-- IMAGEN 1: FOTO DE TEFA
-                 Archivo: img/tefa.jpg -->
+</section>
 
-            <div class="polaroid">
+
+
+<!-- ==========================================
+     INTRO + FOTO TEFA
+=========================================== -->
+
+<section class="intro">
+
+    <div class="container">
+
+        <div class="intro-grid">
+
+            <div class="intro-text">
+
+                <h2>
+                    Tengo una idea
+                    <span>un poco diferente.</span>
+                </h2>
+
+                <p>
+
+                    Pensé que podríamos hacer algo distinto
+                    este sábado.
+
+                    Nada demasiado complicado.
+
+                    Solo una buena aventura, un lugar bonito
+                    y alguien con quien valga la pena compartirla.
+
+                </p>
+
+            </div>
+
+
+            <!--
+            ======================================
+            IMAGEN 1 — TEFA
+
+            Pon aquí:
+            img/tefa.jpg
+
+            NO necesitas cambiar el nombre.
+            ======================================
+            -->
+
+            <div class="intro-photo">
 
                 <img
                     src="img/tefa.jpg"
-                    alt="Foto de Tefa"
-                    onerror="this.src='https://placehold.co/500x600/ffdce3/555?text=FOTO+DE+TEFA'"
+                    alt="Tefa"
                 >
 
-                <div class="photo-label">
-                    ✨ Tefa ✨
-                </div>
-
-            </div>
-
-
-            <div class="cat">
-                🐱
-            </div>
-
-
-            <!-- IMAGEN 2: FOTO DE RAFTING
-                 Archivo: img/rafting.jpg -->
-
-            <div class="polaroid">
-
-                <img
-                    src="img/rafting.jpg"
-                    alt="Rafting"
-                    onerror="this.src='https://placehold.co/500x600/d5f3fa/555?text=RAFTING'"
-                >
-
-                <div class="photo-label">
-                    🌊 aventura
+                <div class="photo-number">
+                    01 / TEFA
                 </div>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- =========================
-         RÍO CHILINA
-    ========================= -->
 
-    <section class="river">
+<!-- ==========================================
+     RAFTING
+=========================================== -->
 
-        <div class="river-content">
+<section class="rafting-section">
 
-            <div class="river-title">
-                El plan 🌊
+    <div class="container">
+
+        <div class="section-header">
+
+            <small>
+                LA AVENTURA
+            </small>
+
+            <h2>
+                Un poco de adrenalina.
+            </h2>
+
+            <p>
+                Porque una salida diferente siempre
+                se recuerda un poco más.
+            </p>
+
+        </div>
+
+
+        <!--
+        ======================================
+        IMAGEN 2 — RAFTING
+
+        Pon aquí:
+        img/rafting.jpg
+        ======================================
+        -->
+
+        <div class="large-photo">
+
+            <img
+                src="img/rafting.jpg"
+                alt="Rafting"
+            >
+
+            <div class="photo-caption">
+
+                <strong>
+                    Río, aventura y buena compañía.
+                </strong>
+
+                <span>
+                    El plan empieza aquí.
+                </span>
+
             </div>
 
-            <div class="river-subtitle">
-                Tú + yo + agua + un poquito de locura
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     EL PLAN
+=========================================== -->
+
+<section class="plan">
+
+    <div class="container">
+
+        <h2>
+            El plan.
+        </h2>
+
+        <div class="plan-grid">
+
+            <div class="plan-card">
+
+                <div class="plan-icon">
+                    🌊
+                </div>
+
+                <h3>
+                    Río Chilina
+                </h3>
+
+                <p>
+                    Un lugar diferente para desconectarnos
+                    un rato de todo.
+                </p>
+
             </div>
 
 
-            <!-- IMAGEN 3: RÍO CHILINA
-                 Archivo: img/rio-chilina.jpg -->
+            <div class="plan-card">
 
-            <div class="polaroid river-photo">
+                <div class="plan-icon">
+                    🛶
+                </div>
+
+                <h3>
+                    Rafting
+                </h3>
+
+                <p>
+                    Una experiencia nueva que seguramente
+                    nos dará alguna buena historia.
+                </p>
+
+            </div>
+
+
+            <div class="plan-card">
+
+                <div class="plan-icon">
+                    📸
+                </div>
+
+                <h3>
+                    Recuerdos
+                </h3>
+
+                <p>
+                    Fotos, risas y probablemente alguna
+                    foto en la que salgamos completamente empapados.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     RÍO CHILINA
+=========================================== -->
+
+<section class="chilina">
+
+    <div class="container">
+
+        <div class="chilina-grid">
+
+
+            <!--
+            ======================================
+            IMAGEN 3 — RÍO CHILINA
+
+            Pon aquí:
+            img/rio-chilina.jpg
+            ======================================
+            -->
+
+            <div class="chilina-photo">
 
                 <img
                     src="img/rio-chilina.jpg"
                     alt="Río Chilina"
-                    onerror="this.src='https://placehold.co/1200x600/b9e8f5/555?text=FOTO+DEL+RIO+CHILINA'"
                 >
 
-                <div class="photo-label">
-                    📍 Río Chilina
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="boat">
-            🛶
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         RAZONES
-    ========================= -->
-
-    <section class="section">
-
-        <h2 class="section-title">
-            Imagina esto... <span>♡</span>
-        </h2>
-
-        <div class="reasons">
-
-            <div class="reason">
-
-                <div class="reason-icon">
-                    🛶
-                </div>
-
-                <h3>Aventura</h3>
-
-                <p>
-                    Algo diferente para salir de la rutina.
-                </p>
-
             </div>
 
 
-            <div class="reason">
+            <div class="chilina-text">
 
-                <div class="reason-icon">
-                    📸
-                </div>
-
-                <h3>Recuerdos</h3>
-
-                <p>
-                    Fotos que probablemente nos darán risa después.
-                </p>
-
-            </div>
-
-
-            <div class="reason">
-
-                <div class="reason-icon">
-                    😂
-                </div>
-
-                <h3>Risas</h3>
-
-                <p>
-                    Porque seguro alguno de los dos termina empapado.
-                </p>
-
-            </div>
-
-
-            <div class="reason">
-
-                <div class="reason-icon">
-                    🐱
-                </div>
-
-                <h3>Buena compañía</h3>
-
-                <p>
-                    Y aparentemente los gatos ya aprobaron el plan.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         SECCIÓN GATOS
-    ========================= -->
-
-    <section class="section">
-
-        <div class="cat-section">
-
-
-            <!-- IMAGEN 4: GATOS
-                 Archivo: img/gatos.jpg -->
-
-            <div class="polaroid cat-photo">
-
-                <img
-                    src="img/gatos.jpg"
-                    alt="Gatitos"
-                    onerror="this.src='https://placehold.co/600x600/ffe1e7/555?text=FOTO+DE+GATITOS'"
-                >
-
-                <div class="photo-label">
-                    🐱 comité oficial de aprobación
-                </div>
-
-            </div>
-
-
-            <div class="cat-message">
+                <small>
+                    DESTINO
+                </small>
 
                 <h2>
-                    Una opinión importante...
+                    Río
+                    <span>Chilina.</span>
                 </h2>
 
                 <p>
-                    Consulté con los gatos y, después de una reunión
-                    bastante seria, llegaron a la conclusión de que
-                    deberías decir que sí.
-                </p>
 
-                <br>
+                    Creo que podría ser un buen lugar
+                    para pasar el sábado.
 
-                <p>
-                    Yo también estoy de acuerdo con ellos. 🐱♡
+                    Un poco de aventura, salir de la rutina
+                    y simplemente pasarla bien.
+
+                    Y sí, también prometo intentar no hacer
+                    alguna tontería en el río.
+
                 </p>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- =========================
-         FOTO DE USTEDES
-    ========================= -->
 
-    <section class="section" style="text-align:center;">
+<!-- ==========================================
+     GATOS
+=========================================== -->
 
-        <h2 class="section-title">
-            Y si todo sale bien... <span>📸</span>
-        </h2>
+<section class="cats">
 
+    <div class="cats-content">
 
-        <!-- IMAGEN 5: FOTO DE USTEDES
-             Archivo: img/nosotros.jpg -->
-
-        <div
-            class="polaroid"
-            style="
-                max-width:650px;
-                height:500px;
-                margin:auto;
-                transform:rotate(-2deg);
-            "
-        >
-
-            <img
-                src="img/nosotros.jpg"
-                alt="Foto de nosotros"
-                onerror="this.src='https://placehold.co/900x700/ffe5ea/555?text=AQUI+VA+UNA+FOTO+DE+NOSOTROS'"
-            >
-
-            <div class="photo-label">
-                quizá esta sea nuestra próxima foto ♡
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         PREGUNTA FINAL
-    ========================= -->
-
-    <section class="invitation">
-
-        <div style="font-size:70px;">
-            🐱 💗 🛶
+        <div class="cats-symbol">
+            🐈
         </div>
 
         <h2>
-            Entonces, Tefa...
+            Hay una pequeña condición.
         </h2>
 
         <p>
-            ¿Qué dices, te animas?
+
+            Los gatos tienen que aprobar oficialmente
+            nuestra salida.
+
+            Por suerte, parece que ya están de acuerdo.
+
+        </p>
+
+
+        <!--
+        ======================================
+        IMAGEN 4 — GATOS
+
+        Pon aquí:
+        img/gatos.jpg
+
+        Puede ser una foto de gatos que te guste.
+        ======================================
+        -->
+
+        <div class="cats-photo">
+
+            <img
+                src="img/gatos.jpg"
+                alt="Gatos"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     FOTO DE USTEDES
+=========================================== -->
+
+<section class="memory">
+
+    <div class="memory-container">
+
+        <h2>
+            Y quizá...
+        </h2>
+
+        <p>
+            esta podría ser nuestra próxima foto juntos.
+        </p>
+
+
+        <!--
+        ======================================
+        IMAGEN 5 — USTEDES
+
+        Pon aquí:
+        img/nosotros.jpg
+
+        Si todavía no tienes una foto de ustedes,
+        puedes dejar esta imagen para después.
+        ======================================
+        -->
+
+        <div class="memory-photo">
+
+            <img
+                src="img/nosotros.jpg"
+                alt="Nosotros"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     PREGUNTA FINAL
+=========================================== -->
+
+<section class="final">
+
+    <div class="final-content">
+
+        <small>
+            Y ahora sí...
+        </small>
+
+        <h2>
+            Tefa,
+            <span>¿te animas?</span>
+        </h2>
+
+        <p>
+            Prometo que será un buen sábado.
         </p>
 
 
@@ -926,15 +1098,14 @@
                 class="yes"
                 onclick="sayYes()"
             >
-                🐱 ¡Siii, vamos! ♡
+                Sí, vamos.
             </button>
 
-
             <button
-                class="think"
-                onclick="sayThink()"
+                class="maybe"
+                onclick="sayMaybe()"
             >
-                Déjame pensarlo 🙈
+                Déjame pensarlo.
             </button>
 
         </div>
@@ -943,143 +1114,94 @@
         <div id="response">
 
             <h3>
-                SABÍA QUE DIRÍAS QUE SÍ 😭♡
+                Entonces tenemos un plan.
             </h3>
 
             <p>
-                Prometo llevar buena energía, ganas de pasarla bien
-                y probablemente hacer el ridículo en algún momento.
+                Me alegra que hayas dicho que sí.
+                Ahora solo falta preparar todo para el sábado. 🌊
             </p>
-
-            <div style="font-size:50px; margin-top:15px;">
-                🐱 🌊 🛶 💗
-            </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- =========================
-         FOOTER
-    ========================= -->
 
-    <footer>
+<!-- ==========================================
+     FOOTER
+=========================================== -->
 
-        Hecho con ❤️ para Tefa 🐱
+<footer>
 
-        <br>
+    Hecho especialmente para <span>Tefa</span>.
 
-        <small>
-            PD: llevaré snacks y buena energía.
-        </small>
-
-    </footer>
+</footer>
 
 
-    <!-- =========================
-         JAVASCRIPT
-    ========================= -->
 
-    <script>
+<script>
 
-        function createHeart() {
+    function sayYes() {
 
-            const heart = document.createElement("div");
+        const response =
+            document.getElementById("response");
 
-            heart.classList.add("falling-heart");
+        response.style.display = "block";
 
-            const hearts = ["♡", "♥", "💗", "🐱"];
+        response.innerHTML = `
 
-            heart.innerHTML =
-                hearts[Math.floor(Math.random() * hearts.length)];
+            <h3>
+                Entonces tenemos un plan.
+            </h3>
 
-            heart.style.left =
-                Math.random() * 100 + "vw";
+            <p>
+                Me alegra que hayas dicho que sí.
+                Ahora solo falta preparar todo para el sábado. 🌊
+            </p>
 
-            heart.style.animationDuration =
-                (3 + Math.random() * 4) + "s";
+        `;
 
-            heart.style.fontSize =
-                (15 + Math.random() * 20) + "px";
+        response.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
 
-            document.body.appendChild(heart);
-
-            setTimeout(() => {
-                heart.remove();
-            }, 7000);
-        }
+    }
 
 
-        function sayYes() {
+    function sayMaybe() {
 
-            const response =
-                document.getElementById("response");
+        const response =
+            document.getElementById("response");
 
-            response.style.display = "block";
+        response.style.display = "block";
 
-            response.scrollIntoView({
-                behavior: "smooth",
-                block: "center"
-            });
+        response.innerHTML = `
 
+            <h3>
+                Está bien.
+            </h3>
 
-            // Lluvia de corazones
-            for (let i = 0; i < 30; i++) {
+            <p>
+                Piénsalo con calma...
+                aunque espero que los gatos terminen
+                convenciéndote. 🐈
+            </p>
 
-                setTimeout(() => {
-                    createHeart();
-                }, i * 100);
+        `;
 
-            }
+        response.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
 
-        }
+    }
 
+</script>
 
-        function sayThink() {
-
-            const response =
-                document.getElementById("response");
-
-            response.style.display = "block";
-
-            response.innerHTML = `
-
-                <h3>
-                    Está bien, Tefa 🙈♡
-                </h3>
-
-                <p>
-                    Tómate tu tiempo...
-                    pero los gatos y yo esperamos
-                    que la respuesta sea sí. 🐱
-                </p>
-
-                <div style="font-size:50px; margin-top:15px;">
-                    🐱 🥺 💗
-                </div>
-
-            `;
-
-            response.scrollIntoView({
-                behavior: "smooth",
-                block: "center"
-            });
-
-        }
-
-
-        // Corazones flotando ocasionalmente
-
-        setInterval(() => {
-
-            if (Math.random() > 0.5) {
-                createHeart();
-            }
-
-        }, 1800);
-
-    </script>
 
 </body>
 </html>
