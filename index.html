@@ -1,15 +1,28 @@
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
+
+    <meta
+        name="theme-color"
+        content="#f4eee5"
+    >
 
     <title>Para Tefa ♡</title>
 
+
     <style>
+
+        /* =========================
+           CONFIGURACIÓN GENERAL
+        ========================= */
 
         * {
             box-sizing: border-box;
@@ -17,23 +30,47 @@
             padding: 0;
         }
 
+        html {
+            -webkit-text-size-adjust: 100%;
+            scroll-behavior: smooth;
+        }
+
         body {
+
             min-height: 100vh;
+            min-height: 100svh;
+
             background: #f4eee5;
-            color: #4c514b;
-            font-family: Arial, sans-serif;
+
+            color: #555a54;
+
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Arial,
+                sans-serif;
 
             display: flex;
             justify-content: center;
             align-items: center;
 
-            padding: 20px;
+            padding:
+                max(16px, env(safe-area-inset-top))
+                max(16px, env(safe-area-inset-right))
+                max(16px, env(safe-area-inset-bottom))
+                max(16px, env(safe-area-inset-left));
+
+            overflow-x: hidden;
         }
 
 
-        /* TARJETA PRINCIPAL */
+        /* =========================
+           TARJETA
+        ========================= */
 
         .card {
+
             width: 100%;
             max-width: 520px;
 
@@ -41,12 +78,12 @@
 
             border-radius: 24px;
 
-            padding: 42px 32px 35px;
+            padding: 38px 32px 30px;
 
             text-align: center;
 
             box-shadow:
-                0 15px 40px rgba(80, 75, 65, 0.12);
+                0 18px 45px rgba(83, 78, 68, 0.13);
 
             position: relative;
 
@@ -54,72 +91,104 @@
         }
 
 
-        /* PEQUEÑO DETALLE */
+        /* =========================
+           GATITO
+        ========================= */
 
         .cat {
+
             position: absolute;
 
             top: 18px;
             right: 22px;
 
-            font-size: 22px;
+            font-size: 21px;
 
             opacity: 0.65;
+
+            user-select: none;
         }
 
 
-        .hello {
-            font-size: 13px;
+        /* =========================
+           TEXTO SUPERIOR
+        ========================= */
 
-            letter-spacing: 2px;
+        .small-title {
+
+            font-size: 11px;
+
+            letter-spacing: 2.2px;
 
             text-transform: uppercase;
 
-            color: #9a9b87;
+            color: #a29f91;
 
-            margin-bottom: 15px;
+            margin-bottom: 13px;
         }
 
 
-        h1 {
-            font-family: Georgia, serif;
+        /* =========================
+           TEFA
+        ========================= */
 
-            font-size: clamp(55px, 15vw, 80px);
+        h1 {
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: clamp(58px, 15vw, 82px);
 
             font-weight: normal;
 
-            color: #697b69;
+            line-height: 1;
+
+            color: #71816f;
 
             margin-bottom: 22px;
         }
 
 
         h1 span {
+
             color: #d99a82;
         }
 
 
+        /* =========================
+           PREGUNTA
+        ========================= */
+
         .question {
-            font-family: Georgia, serif;
 
-            font-size: clamp(23px, 6vw, 30px);
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
 
-            line-height: 1.4;
+            font-size: clamp(22px, 5.8vw, 29px);
+
+            line-height: 1.42;
 
             color: #555a54;
 
-            margin-bottom: 28px;
+            margin-bottom: 25px;
         }
 
 
         .question strong {
-            color: #c98470;
+
+            color: #c98370;
+
+            font-weight: normal;
         }
 
 
-        /* FOTO */
+        /* =========================
+           FOTO
+        ========================= */
 
         .photo {
+
             width: 100%;
 
             aspect-ratio: 4 / 3;
@@ -128,214 +197,374 @@
 
             overflow: hidden;
 
-            margin-bottom: 25px;
+            background: #dce3d8;
 
-            background: #dce2d7;
+            margin-bottom: 24px;
         }
 
 
         .photo img {
+
             width: 100%;
             height: 100%;
 
+            display: block;
+
             object-fit: cover;
 
-            display: block;
+            object-position: center;
         }
 
 
+        /* =========================
+           MENSAJE
+        ========================= */
+
         .message {
+
+            max-width: 390px;
+
+            margin: 0 auto 26px;
+
             font-size: 15px;
 
             line-height: 1.7;
 
-            color: #777b74;
-
-            max-width: 390px;
-
-            margin: 0 auto 28px;
+            color: #777a73;
         }
 
 
-        /* BOTONES */
+        /* =========================
+           BOTONES
+        ========================= */
 
         .buttons {
+
             display: flex;
 
             justify-content: center;
 
-            gap: 12px;
+            gap: 11px;
 
             width: 100%;
         }
 
 
         button {
-            border: none;
 
-            padding: 14px 22px;
+            border: none;
 
             border-radius: 30px;
 
-            font-size: 15px;
+            padding: 14px 21px;
 
-            font-family: Arial, sans-serif;
+            min-height: 48px;
+
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Arial,
+                sans-serif;
+
+            font-size: 14px;
 
             cursor: pointer;
 
-            transition: transform .2s ease,
-                        box-shadow .2s ease;
+            -webkit-tap-highlight-color: transparent;
+
+            transition:
+                transform 0.18s ease,
+                box-shadow 0.18s ease;
         }
 
 
         button:active {
-            transform: scale(.96);
+
+            transform: scale(0.96);
         }
 
 
         .yes {
-            background: #c9d8c4;
 
-            color: #455344;
+            background: #cbd9c6;
+
+            color: #455342;
         }
 
 
         .think {
-            background: #ead3c8;
 
-            color: #72564c;
+            background: #ead4c9;
+
+            color: #76594e;
         }
 
 
-        button:hover {
-            transform: translateY(-2px);
+        @media (hover: hover) {
 
-            box-shadow:
-                0 5px 12px rgba(70,70,60,.12);
+            button:hover {
+
+                transform: translateY(-2px);
+
+                box-shadow:
+                    0 6px 15px rgba(80, 75, 65, 0.12);
+            }
+
         }
 
 
-        /* RESPUESTA */
+        /* =========================
+           RESPUESTA
+        ========================= */
 
-        #response {
+        .response {
+
             display: none;
 
-            margin-top: 25px;
+            margin-top: 22px;
 
-            padding: 20px;
+            padding: 18px 17px;
 
             border-radius: 16px;
 
-            background: #f1e7da;
+            background: #f2e8dc;
 
-            animation: appear .35s ease;
+            animation: aparecer 0.35s ease;
         }
 
 
-        #response h2 {
-            font-family: Georgia, serif;
+        .response h2 {
 
-            font-size: 25px;
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 24px;
 
             font-weight: normal;
 
-            color: #697b69;
+            color: #71816f;
 
             margin-bottom: 8px;
         }
 
 
-        #response p {
+        .response p {
+
             font-size: 14px;
 
             line-height: 1.6;
 
-            color: #74776f;
+            color: #747870;
         }
 
 
-        @keyframes appear {
+        @keyframes aparecer {
 
             from {
+
                 opacity: 0;
+
                 transform: translateY(8px);
             }
 
             to {
+
                 opacity: 1;
+
                 transform: translateY(0);
             }
-
         }
 
 
-        .small {
-            margin-top: 25px;
+        /* =========================
+           PIE
+        ========================= */
 
-            font-size: 11px;
+        .footer {
 
-            color: #aaa99e;
+            margin-top: 23px;
+
+            font-size: 10px;
+
+            letter-spacing: 1px;
+
+            color: #aaa89e;
         }
 
 
-        /* CELULAR */
+        /* =========================
+           CELULARES
+        ========================= */
 
         @media (max-width: 480px) {
 
             body {
-                padding: 12px;
+
+                align-items: center;
+
+                padding:
+                    max(12px, env(safe-area-inset-top))
+                    max(12px, env(safe-area-inset-right))
+                    max(12px, env(safe-area-inset-bottom))
+                    max(12px, env(safe-area-inset-left));
             }
 
 
             .card {
+
                 padding:
-                    38px
+                    35px
                     20px
-                    28px;
+                    27px;
 
                 border-radius: 20px;
             }
 
 
             .cat {
+
                 top: 14px;
+
                 right: 16px;
+
+                font-size: 19px;
+            }
+
+
+            .small-title {
+
+                font-size: 10px;
+
+                letter-spacing: 1.8px;
             }
 
 
             h1 {
+
                 font-size: 62px;
+
+                margin-bottom: 20px;
             }
 
 
             .question {
-                font-size: 23px;
+
+                font-size: 22px;
+
+                margin-bottom: 22px;
             }
 
 
             .photo {
+
+                aspect-ratio: 4 / 3;
+
                 border-radius: 15px;
+
+                margin-bottom: 21px;
             }
 
 
             .message {
+
                 font-size: 14px;
+
+                line-height: 1.65;
+
+                margin-bottom: 23px;
             }
 
 
             .buttons {
+
                 flex-direction: column;
 
-                max-width: 280px;
+                max-width: 290px;
 
-                margin: auto;
+                margin: 0 auto;
+
+                gap: 9px;
             }
 
 
             button {
+
                 width: 100%;
+
+                min-height: 47px;
             }
 
+
+            .response {
+
+                margin-top: 19px;
+
+                padding: 17px 14px;
+            }
+
+
+            .footer {
+
+                margin-top: 20px;
+            }
+        }
+
+
+        /* =========================
+           PANTALLAS MUY PEQUEÑAS
+        ========================= */
+
+        @media (max-height: 700px) and (max-width: 480px) {
+
+            .card {
+
+                padding-top: 27px;
+
+                padding-bottom: 22px;
+            }
+
+
+            .small-title {
+
+                margin-bottom: 9px;
+            }
+
+
+            h1 {
+
+                font-size: 53px;
+
+                margin-bottom: 15px;
+            }
+
+
+            .question {
+
+                font-size: 20px;
+
+                margin-bottom: 17px;
+            }
+
+
+            .photo {
+
+                margin-bottom: 17px;
+            }
+
+
+            .message {
+
+                margin-bottom: 18px;
+            }
+
+
+            .footer {
+
+                margin-top: 14px;
+            }
         }
 
     </style>
@@ -349,12 +578,16 @@
     <main class="card">
 
 
+        <!-- Detalle pequeño -->
+
         <div class="cat">
             🐈
         </div>
 
 
-        <div class="hello">
+        <!-- Encabezado -->
+
+        <div class="small-title">
             una invitación para ti
         </div>
 
@@ -363,6 +596,8 @@
             Tefa<span>.</span>
         </h1>
 
+
+        <!-- Pregunta -->
 
         <div class="question">
 
@@ -375,25 +610,36 @@
 
 
         <!--
+            ============================
             FOTO
+            ============================
 
-            Pon aquí tu imagen:
+            Tu foto debe llamarse:
 
-            img/balsa.jpg
+            balsa.jpg
 
-            La foto ideal sería una foto
-            de ustedes dos juntos en la balsa.
+            Y debe estar en la misma carpeta
+            que este index.html.
+
+            Ejemplo:
+
+            Tefa-3
+            ├── index.html
+            └── balsa.jpg
+
         -->
 
         <div class="photo">
 
             <img
-                src="img/balsa.jpg"
+                src="balsa.jpg"
                 alt="Tefa y yo en la balsa"
             >
 
         </div>
 
+
+        <!-- Mensaje -->
 
         <p class="message">
 
@@ -406,14 +652,19 @@
         </p>
 
 
+        <!-- Botones -->
+
         <div class="buttons">
+
 
             <button
                 class="yes"
                 id="yesButton"
                 type="button"
             >
+
                 Sí, vamos ♡
+
             </button>
 
 
@@ -422,17 +673,26 @@
                 id="thinkButton"
                 type="button"
             >
+
                 Déjame pensarlo
+
             </button>
+
 
         </div>
 
 
-        <div id="response"></div>
+        <!-- Respuesta -->
+
+        <div
+            class="response"
+            id="response"
+        >
+        </div>
 
 
-        <div class="small">
-            hecho para Tefa
+        <div class="footer">
+            hecho para Tefa ♡
         </div>
 
 
@@ -440,6 +700,10 @@
 
 
     <script>
+
+        /* =========================
+           BOTONES
+        ========================= */
 
         const yesButton =
             document.getElementById("yesButton");
@@ -451,46 +715,70 @@
             document.getElementById("response");
 
 
-        yesButton.addEventListener("click", function () {
+        /* =========================
+           SÍ, VAMOS
+        ========================= */
 
-            response.style.display = "block";
+        yesButton.addEventListener(
+            "click",
+            function () {
 
-            response.innerHTML = `
-                <h2>Entonces tenemos una cita ♡</h2>
-                <p>
-                    Me alegra que hayas dicho que sí.
-                    Ahora solo falta esperar al sábado.
-                    Prometo que la vamos a pasar muy bien.
-                </p>
-            `;
+                response.style.display = "block";
 
-            response.scrollIntoView({
-                behavior: "smooth",
-                block: "nearest"
-            });
+                response.innerHTML = `
 
-        });
+                    <h2>
+                        Entonces tenemos una cita ♡
+                    </h2>
+
+                    <p>
+                        Me alegra que hayas dicho que sí.
+                        Ahora solo falta esperar al sábado.
+                        Prometo que la vamos a pasar muy bien.
+                    </p>
+
+                `;
+
+                response.scrollIntoView({
+                    behavior: "smooth",
+                    block: "nearest"
+                });
+
+            }
+        );
 
 
-        thinkButton.addEventListener("click", function () {
+        /* =========================
+           DÉJAME PENSARLO
+        ========================= */
 
-            response.style.display = "block";
+        thinkButton.addEventListener(
+            "click",
+            function () {
 
-            response.innerHTML = `
-                <h2>Está bien :)</h2>
-                <p>
-                    Piénsalo con calma...
-                    aunque espero que al final
-                    te animes a ir conmigo.
-                </p>
-            `;
+                response.style.display = "block";
 
-            response.scrollIntoView({
-                behavior: "smooth",
-                block: "nearest"
-            });
+                response.innerHTML = `
 
-        });
+                    <h2>
+                        Está bien :)
+                    </h2>
+
+                    <p>
+                        Piénsalo con calma...
+                        aunque espero que al final
+                        te animes a ir conmigo.
+                    </p>
+
+                `;
+
+                response.scrollIntoView({
+                    behavior: "smooth",
+                    block: "nearest"
+                });
+
+            }
+        );
 
     </script>
 
