@@ -2036,34 +2036,7 @@
                 </div>
 
 
-                <h2>
-                    Hay una pequeña condición.
-                </h2>
-
-
-                <p>
-
-                    Los gatos tienen que aprobar oficialmente
-                    nuestra salida.
-
-                    Por suerte, parece que ya están de acuerdo.
-
-                </p>
-
-
-
-                <!--
-                =================================================
-                IMAGEN 4
-
-                NOMBRE EXACTO:
-
-                img/gatos.jpg
-
-                =================================================
-                -->
-
-                <div class="cats-photo">
+            
 
                     <img
                         src="img/gatos.jpg"
