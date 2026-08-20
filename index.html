@@ -12,7 +12,7 @@
 
     <meta
         name="theme-color"
-        content="#f4eee5"
+        content="#eef0f1"
     >
 
     <title>Para Tefa ♡</title>
@@ -20,27 +20,26 @@
 
     <style>
 
-       
-
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
+
         html {
             -webkit-text-size-adjust: 100%;
             scroll-behavior: smooth;
         }
 
-        body {
 
+        body {
             min-height: 100vh;
             min-height: 100svh;
 
-            background: #f4eee5;
+            background: #eef0f1;
 
-            color: #555a54;
+            color: #4f5558;
 
             font-family:
                 -apple-system,
@@ -63,13 +62,11 @@
         }
 
 
-  
         .card {
-
             width: 100%;
             max-width: 520px;
 
-            background: #fffaf3;
+            background: #faf9f6;
 
             border-radius: 24px;
 
@@ -78,7 +75,7 @@
             text-align: center;
 
             box-shadow:
-                0 18px 45px rgba(83, 78, 68, 0.13);
+                0 18px 45px rgba(55, 62, 67, 0.13);
 
             position: relative;
 
@@ -87,7 +84,6 @@
 
 
         .cat {
-
             position: absolute;
 
             top: 18px;
@@ -95,30 +91,30 @@
 
             font-size: 21px;
 
-            opacity: 0.65;
+            opacity: 0.55;
 
             user-select: none;
         }
 
 
         .small-title {
-
             font-size: 11px;
 
             letter-spacing: 2.2px;
 
             text-transform: uppercase;
 
-            color: #a29f91;
+            color: #8b9295;
 
             margin-bottom: 13px;
         }
 
 
-
         h1 {
-
-            font-family: Georgia, "Times New Roman", serif;
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
 
             font-size: clamp(58px, 15vw, 82px);
 
@@ -126,22 +122,18 @@
 
             line-height: 1;
 
-            color: #71816f;
+            color: #596b76;
 
             margin-bottom: 22px;
         }
 
 
         h1 span {
-
-            color: #d99a82;
+            color: #7c8991;
         }
 
 
-
-
         .question {
-
             font-family:
                 Georgia,
                 "Times New Roman",
@@ -151,23 +143,20 @@
 
             line-height: 1.42;
 
-            color: #555a54;
+            color: #4f5558;
 
             margin-bottom: 25px;
         }
 
 
         .question strong {
-
-            color: #c98370;
+            color: #687b86;
 
             font-weight: normal;
         }
 
 
-
         .photo {
-
             width: 100%;
 
             aspect-ratio: 4 / 3;
@@ -176,14 +165,13 @@
 
             overflow: hidden;
 
-            background: #dce3d8;
+            background: #dce1e3;
 
             margin-bottom: 24px;
         }
 
 
         .photo img {
-
             width: 100%;
             height: 100%;
 
@@ -195,25 +183,20 @@
         }
 
 
-
-
         .message {
-
             max-width: 390px;
 
             margin: 0 auto 26px;
 
             font-size: 15px;
 
-            line-height: 1.7;
+            line-height: 1.75;
 
-            color: #777a73;
+            color: #6c7275;
         }
 
 
-
         .buttons {
-
             display: flex;
 
             justify-content: center;
@@ -225,7 +208,6 @@
 
 
         button {
-
             border: none;
 
             border-radius: 30px;
@@ -254,44 +236,37 @@
 
 
         button:active {
-
             transform: scale(0.96);
         }
 
 
         .yes {
+            background: #647782;
 
-            background: #cbd9c6;
-
-            color: #455342;
+            color: #ffffff;
         }
 
 
         .think {
+            background: #deddd8;
 
-            background: #ead4c9;
-
-            color: #76594e;
+            color: #555c60;
         }
 
 
         @media (hover: hover) {
 
             button:hover {
-
                 transform: translateY(-2px);
 
                 box-shadow:
-                    0 6px 15px rgba(80, 75, 65, 0.12);
+                    0 6px 15px rgba(55, 62, 67, 0.16);
             }
 
         }
 
 
-    
-
         .response {
-
             display: none;
 
             margin-top: 22px;
@@ -300,14 +275,13 @@
 
             border-radius: 16px;
 
-            background: #f2e8dc;
+            background: #e8ebec;
 
             animation: aparecer 0.35s ease;
         }
 
 
         .response h2 {
-
             font-family:
                 Georgia,
                 "Times New Roman",
@@ -317,49 +291,46 @@
 
             font-weight: normal;
 
-            color: #71816f;
+            color: #596b76;
 
             margin-bottom: 8px;
         }
 
 
         .response p {
-
             font-size: 14px;
 
             line-height: 1.6;
 
-            color: #747870;
+            color: #656d70;
         }
 
 
         @keyframes aparecer {
 
             from {
-
                 opacity: 0;
 
                 transform: translateY(8px);
             }
 
             to {
-
                 opacity: 1;
 
                 transform: translateY(0);
             }
+
         }
 
 
         .footer {
-
             margin-top: 23px;
 
             font-size: 10px;
 
             letter-spacing: 1px;
 
-            color: #aaa89e;
+            color: #9a9fa1;
         }
 
 
@@ -367,7 +338,6 @@
         @media (max-width: 480px) {
 
             body {
-
                 align-items: center;
 
                 padding:
@@ -379,7 +349,6 @@
 
 
             .card {
-
                 padding:
                     35px
                     20px
@@ -390,7 +359,6 @@
 
 
             .cat {
-
                 top: 14px;
 
                 right: 16px;
@@ -400,7 +368,6 @@
 
 
             .small-title {
-
                 font-size: 10px;
 
                 letter-spacing: 1.8px;
@@ -408,7 +375,6 @@
 
 
             h1 {
-
                 font-size: 62px;
 
                 margin-bottom: 20px;
@@ -416,7 +382,6 @@
 
 
             .question {
-
                 font-size: 22px;
 
                 margin-bottom: 22px;
@@ -424,7 +389,6 @@
 
 
             .photo {
-
                 aspect-ratio: 4 / 3;
 
                 border-radius: 15px;
@@ -434,17 +398,15 @@
 
 
             .message {
-
                 font-size: 14px;
 
-                line-height: 1.65;
+                line-height: 1.7;
 
                 margin-bottom: 23px;
             }
 
 
             .buttons {
-
                 flex-direction: column;
 
                 max-width: 290px;
@@ -456,7 +418,6 @@
 
 
             button {
-
                 width: 100%;
 
                 min-height: 47px;
@@ -464,7 +425,6 @@
 
 
             .response {
-
                 margin-top: 19px;
 
                 padding: 17px 14px;
@@ -472,16 +432,15 @@
 
 
             .footer {
-
                 margin-top: 20px;
             }
+
         }
 
 
         @media (max-height: 700px) and (max-width: 480px) {
 
             .card {
-
                 padding-top: 27px;
 
                 padding-bottom: 22px;
@@ -489,13 +448,11 @@
 
 
             .small-title {
-
                 margin-bottom: 9px;
             }
 
 
             h1 {
-
                 font-size: 53px;
 
                 margin-bottom: 15px;
@@ -503,7 +460,6 @@
 
 
             .question {
-
                 font-size: 20px;
 
                 margin-bottom: 17px;
@@ -511,21 +467,19 @@
 
 
             .photo {
-
                 margin-bottom: 17px;
             }
 
 
             .message {
-
                 margin-bottom: 18px;
             }
 
 
             .footer {
-
                 margin-top: 14px;
             }
+
         }
 
     </style>
@@ -539,34 +493,27 @@
     <main class="card">
 
 
-
         <div class="cat">
             🐈
         </div>
 
 
-
         <div class="small-title">
-            una invitación para ti
+            algo que quería decirte
         </div>
 
 
         <h1>
-            Tefa<span>
+            Tefa<span>♡</span>
         </h1>
 
 
-        <!-- Pregunta -->
-
         <div class="question">
 
-            ¿Quisieras ir a hacer
-            <strong>rafting</strong>
-            al río Chilina conmigo
-            el día sábado?
+            Solo quería decirte algo con
+            <strong>sinceridad</strong>.
 
         </div>
-
 
 
         <div class="photo">
@@ -579,20 +526,30 @@
         </div>
 
 
-        <!-- Mensaje -->
-
         <p class="message">
 
-            Pensé que podría ser bonito hacer
-            algo diferente contigo.
+            Lamento que hayas sentido que no confío en ti.
+            No es así. Confío en ti y nunca quise que
+            mi forma de reservarme algunas cosas te hiciera
+            sentir lo contrario.
 
-            Un poco de aventura, unas risas
-            y pasar un buen rato juntos.
+            <br><br>
+
+            Tampoco estaba cerrando mi corazón.
+            Simplemente no quería tomar a la ligera
+            tu tiempo ni el mío, ni desperdiciar algo
+            que para mí era bonito.
+
+            <br><br>
+
+            Quizá algunas cosas se entendieron distinto
+            a como yo quería expresarlas.
+            Si todavía podemos hacerlo, me gustaría
+            conversarlo contigo en persona, con calma
+            y sinceridad.
 
         </p>
 
-
-        <!-- Botones -->
 
         <div class="buttons">
 
@@ -602,9 +559,7 @@
                 id="yesButton"
                 type="button"
             >
-
-                Sí, vamos ♡
-
+                Sí, hablemos
             </button>
 
 
@@ -613,16 +568,12 @@
                 id="thinkButton"
                 type="button"
             >
-
-                Déjame pensarlo
-
+                Prefiero pensarlo
             </button>
 
 
         </div>
 
-
-        <!-- Respuesta -->
 
         <div
             class="response"
@@ -640,92 +591,112 @@
 
 
     <script>
-     const yesButton =
-    document.getElementById("yesButton");
 
-    const thinkButton =
-    document.getElementById("thinkButton");
-
-    const response =
-    document.getElementById("response");
-
-    const GOOGLE_SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbwUlvKOkMvWBCGusNg-su5cVCMzpzFcR5up_lcBRma8QfMem5VMuOBYvY4dYj6WWOI/exec";
-
-    function guardarRespuesta(respuesta) {
-
-    const url =
-        GOOGLE_SCRIPT_URL +
-        "?respuesta=" +
-        encodeURIComponent(respuesta);
-
-    // Enviar la respuesta a Google Sheets
-    const imagen = new Image();
-    imagen.src = url + "&t=" + Date.now();
-}
+        const yesButton =
+            document.getElementById("yesButton");
 
 
-yesButton.addEventListener(
-    "click",
-    function () {
-
-        guardarRespuesta("Sí, vamos ♡");
-
-        response.style.display = "block";
-
-        response.innerHTML = `
-
-            <h2>
-                Entonces tenemos una cita ♡
-            </h2>
-
-            <p>
-                Me alegra que hayas dicho que sí.
-                Ahora solo falta esperar al sábado.
-                Prometo que la vamos a pasar muy bien.
-            </p>
-
-        `;
-
-        response.scrollIntoView({
-            behavior: "smooth",
-            block: "nearest"
-        });
-
-    }
-);
+        const thinkButton =
+            document.getElementById("thinkButton");
 
 
-thinkButton.addEventListener(
-    "click",
-    function () {
+        const response =
+            document.getElementById("response");
 
-        guardarRespuesta("Déjame pensarlo");
 
-        response.style.display = "block";
+        const GOOGLE_SCRIPT_URL =
+            "https://script.google.com/macros/s/AKfycbwUlvKOkMvWBCGusNg-su5cVCMzpzFcR5up_lcBRma8QfMem5VMuOBYvY4dYj6WWOI/exec";
 
-        response.innerHTML = `
 
-            <h2>
-                Está bien :)
-            </h2>
+        function guardarRespuesta(respuesta) {
 
-            <p>
-                Piénsalo con calma...
-                aunque espero que al final
-                te animes a ir conmigo.
-            </p>
+            const url =
+                GOOGLE_SCRIPT_URL +
+                "?respuesta=" +
+                encodeURIComponent(respuesta);
 
-        `;
+            const imagen = new Image();
 
-        response.scrollIntoView({
-            behavior: "smooth",
-            block: "nearest"
-        });
+            imagen.src =
+                url +
+                "&t=" +
+                Date.now();
+        }
 
-    }
-);
-</script>
+
+        yesButton.addEventListener(
+            "click",
+            function () {
+
+                guardarRespuesta(
+                    "Sí, hablemos"
+                );
+
+
+                response.style.display =
+                    "block";
+
+
+                response.innerHTML = `
+
+                    <h2>
+                        Gracias ♡
+                    </h2>
+
+                    <p>
+                        Me gustaría que pudiéramos
+                        hablarlo con calma y sinceridad.
+                    </p>
+
+                `;
+
+
+                response.scrollIntoView({
+                    behavior: "smooth",
+                    block: "nearest"
+                });
+
+            }
+        );
+
+
+        thinkButton.addEventListener(
+            "click",
+            function () {
+
+                guardarRespuesta(
+                    "Prefiero pensarlo"
+                );
+
+
+                response.style.display =
+                    "block";
+
+
+                response.innerHTML = `
+
+                    <h2>
+                        Lo entiendo.
+                    </h2>
+
+                    <p>
+                        Tómate tu tiempo.
+                        No quiero presionarte.
+                    </p>
+
+                `;
+
+
+                response.scrollIntoView({
+                    behavior: "smooth",
+                    block: "nearest"
+                });
+
+            }
+        );
+
+    </script>
+
 
 </body>
 
