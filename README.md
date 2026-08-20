@@ -15,16 +15,6 @@
         content="#111614"
     >
 
-    <meta
-        name="apple-mobile-web-app-capable"
-        content="yes"
-    >
-
-    <meta
-        name="apple-mobile-web-app-status-bar-style"
-        content="black-translucent"
-    >
-
     <title>Una propuesta para Tefa</title>
 
 
@@ -167,7 +157,6 @@
                 20px;
 
             overflow: hidden;
-
 
             background:
 
@@ -646,8 +635,6 @@
             font-size: 28px;
 
             margin-bottom: 20px;
-
-            filter: grayscale(.3);
         }
 
 
@@ -764,90 +751,6 @@
             line-height: 1.8;
 
             font-size: 17px;
-        }
-
-
-
-        /* =====================================================
-           GATOS
-        ===================================================== */
-
-        .cats {
-
-            width: 100%;
-
-            padding: 90px 0;
-
-            background: #101513;
-        }
-
-
-        .cats-content {
-
-            width: 100%;
-
-            max-width: 800px;
-
-            margin: auto;
-
-            text-align: center;
-        }
-
-
-        .cats-symbol {
-
-            font-size: 38px;
-
-            margin-bottom: 15px;
-
-            filter: grayscale(1);
-        }
-
-
-        .cats h2 {
-
-            font-family: "Playfair Display", serif;
-
-            font-size: clamp(
-                38px,
-                6vw,
-                50px
-            );
-
-            margin-bottom: 20px;
-        }
-
-
-        .cats p {
-
-            color: #aeb5b1;
-
-            font-size: 17px;
-
-            line-height: 1.8;
-        }
-
-
-        .cats-photo {
-
-            width: 100%;
-
-            aspect-ratio: 16 / 9;
-
-            max-height: 450px;
-
-            margin: 45px auto 0;
-
-            overflow: hidden;
-        }
-
-
-        .cats-photo img {
-
-            width: 100%;
-            height: 100%;
-
-            object-fit: cover;
         }
 
 
@@ -1064,6 +967,7 @@
                 border-color .25s ease;
 
             -webkit-appearance: none;
+
             appearance: none;
         }
 
@@ -1125,7 +1029,7 @@
                 20,
                 30,
                 27,
-                .92
+                .95
             );
 
             animation: appear .5s ease;
@@ -1228,6 +1132,7 @@
             .intro-text p {
 
                 margin-left: auto;
+
                 margin-right: auto;
             }
 
@@ -1303,6 +1208,7 @@
             .hero {
 
                 padding-left: 15px;
+
                 padding-right: 15px;
             }
 
@@ -1359,7 +1265,6 @@
             .rafting-section,
             .plan,
             .chilina,
-            .cats,
             .memory {
 
                 padding-top: 70px;
@@ -1477,26 +1382,6 @@
             }
 
 
-            .cats h2 {
-
-                font-size: 38px;
-            }
-
-
-            .cats p {
-
-                font-size: 16px;
-            }
-
-
-            .cats-photo {
-
-                aspect-ratio: 4 / 3;
-
-                margin-top: 35px;
-            }
-
-
             .memory h2 {
 
                 font-size: 45px;
@@ -1518,9 +1403,11 @@
             .final {
 
                 min-height: 90vh;
+
                 min-height: 90svh;
 
                 padding-left: 15px;
+
                 padding-right: 15px;
             }
 
@@ -1546,6 +1433,7 @@
                 max-width: 320px;
 
                 margin-left: auto;
+
                 margin-right: auto;
             }
 
@@ -1564,6 +1452,7 @@
 
                 padding: 22px 18px;
             }
+
         }
 
 
@@ -1608,12 +1497,13 @@
 
                 font-size: 42px;
             }
+
         }
 
 
 
         /* =====================================================
-           ORIENTACIÓN HORIZONTAL EN CELULAR
+           CELULAR HORIZONTAL
         ===================================================== */
 
         @media (
@@ -1662,6 +1552,7 @@
 
                 display: none;
             }
+
         }
 
     </style>
@@ -1761,14 +1652,10 @@
 
 
                 <!--
-                =================================================
                 IMAGEN 1
 
-                NOMBRE EXACTO:
-
+                ARCHIVO:
                 img/tefa.jpg
-
-                =================================================
                 -->
 
                 <div class="intro-photo">
@@ -1825,14 +1712,10 @@
 
 
             <!--
-            =================================================
             IMAGEN 2
 
-            NOMBRE EXACTO:
-
+            ARCHIVO:
             img/rafting.jpg
-
-            =================================================
             -->
 
             <div class="large-photo">
@@ -1961,14 +1844,10 @@
 
 
                 <!--
-                =================================================
                 IMAGEN 3
 
-                NOMBRE EXACTO:
-
+                ARCHIVO:
                 img/rio-chilina.jpg
-
-                =================================================
                 -->
 
                 <div class="chilina-photo">
@@ -2021,40 +1900,6 @@
 
 
     <!-- =====================================================
-         GATOS
-    ====================================================== -->
-
-    <section class="cats">
-
-        <div class="container">
-
-            <div class="cats-content">
-
-
-                <div class="cats-symbol">
-                    🐈
-                </div>
-
-
-            
-
-                    <img
-                        src="img/gatos.jpg"
-                        alt="Gatos"
-                    >
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
          FOTO DE USTEDES
     ====================================================== -->
 
@@ -2077,14 +1922,10 @@
 
 
                 <!--
-                =================================================
-                IMAGEN 5
+                IMAGEN 4
 
-                NOMBRE EXACTO:
-
+                ARCHIVO:
                 img/nosotros.jpg
-
-                =================================================
                 -->
 
                 <div class="memory-photo">
@@ -2106,7 +1947,7 @@
 
 
     <!-- =====================================================
-         FINAL
+         PREGUNTA FINAL
     ====================================================== -->
 
     <section class="final">
@@ -2129,9 +1970,7 @@
 
 
             <p>
-
                 Prometo que será un buen sábado.
-
             </p>
 
 
@@ -2141,28 +1980,29 @@
                 <button
                     type="button"
                     class="yes"
-                    onclick="sayYes()"
+                    id="yesButton"
                 >
-
                     Sí, vamos.
-
                 </button>
 
 
                 <button
                     type="button"
                     class="maybe"
-                    onclick="sayMaybe()"
+                    id="maybeButton"
                 >
-
                     Déjame pensarlo.
-
                 </button>
 
 
             </div>
 
 
+            <!--
+            ESTE ESPACIO SE LLENA
+            AUTOMÁTICAMENTE AL PRESIONAR
+            UNO DE LOS BOTONES.
+            -->
 
             <div id="response"></div>
 
@@ -2188,80 +2028,114 @@
 
     <!-- =====================================================
          JAVASCRIPT
+         LOS BOTONES FUNCIONAN DESDE AQUÍ
     ====================================================== -->
 
     <script>
 
-        function sayYes() {
-
-            const response =
-                document.getElementById("response");
-
-
-            response.style.display = "block";
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
 
 
-            response.innerHTML = `
-
-                <h3>
-                    Entonces tenemos un plan.
-                </h3>
-
-                <p>
-                    Me alegra que hayas dicho que sí.
-                    Ahora solo falta preparar todo para el sábado. 🌊
-                </p>
-
-            `;
+                const yesButton =
+                    document.getElementById("yesButton");
 
 
-            setTimeout(() => {
+                const maybeButton =
+                    document.getElementById("maybeButton");
 
-                response.scrollIntoView({
-                    behavior: "smooth",
-                    block: "center"
-                });
 
-            }, 100);
-
-        }
+                const response =
+                    document.getElementById("response");
 
 
 
-        function sayMaybe() {
+                /* =========================================
+                   BOTÓN "SÍ, VAMOS"
+                ========================================= */
 
-            const response =
-                document.getElementById("response");
+                yesButton.addEventListener(
+                    "click",
+                    function () {
+
+                        response.style.display = "block";
+
+                        response.innerHTML = `
+
+                            <h3>
+                                Entonces tenemos un plan.
+                            </h3>
+
+                            <p>
+                                Me alegra que hayas dicho que sí.
+                                Ahora solo falta preparar todo
+                                para el sábado. 🌊
+                            </p>
+
+                        `;
 
 
-            response.style.display = "block";
+                        setTimeout(
+                            function () {
+
+                                response.scrollIntoView({
+                                    behavior: "smooth",
+                                    block: "center"
+                                });
+
+                            },
+                            100
+                        );
+
+                    }
+                );
 
 
-            response.innerHTML = `
 
-                <h3>
-                    Está bien.
-                </h3>
+                /* =========================================
+                   BOTÓN "DÉJAME PENSARLO"
+                ========================================= */
 
-                <p>
-                    Piénsalo con calma...
-                    aunque espero que los gatos terminen
-                    convenciéndote. 🐈
-                </p>
+                maybeButton.addEventListener(
+                    "click",
+                    function () {
 
-            `;
+                        response.style.display = "block";
+
+                        response.innerHTML = `
+
+                            <h3>
+                                Está bien...
+                            </h3>
+
+                            <p>
+                                Piénsalo con calma.
+                                Aunque espero que al final
+                                te animes a ir conmigo. 🌊
+                            </p>
+
+                        `;
 
 
-            setTimeout(() => {
+                        setTimeout(
+                            function () {
 
-                response.scrollIntoView({
-                    behavior: "smooth",
-                    block: "center"
-                });
+                                response.scrollIntoView({
+                                    behavior: "smooth",
+                                    block: "center"
+                                });
 
-            }, 100);
+                            },
+                            100
+                        );
 
-        }
+                    }
+                );
+
+
+            }
+        );
 
     </script>
 
