@@ -30,10 +30,7 @@
             overflow-x: hidden;
         }
 
-        /* =========================
-           FONDO
-        ========================= */
-
+        /
         body::before {
             content: "";
             position: fixed;
@@ -48,9 +45,7 @@
             z-index: -1;
         }
 
-        /* =========================
-           DECORACIÓN
-        ========================= */
+        /
 
         .heart {
             position: absolute;
