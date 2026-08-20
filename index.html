@@ -1,1 +1,500 @@
+<html lang="es">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Para Tefa ♡</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #f4eee5;
+            color: #4c514b;
+            font-family: Arial, sans-serif;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 20px;
+        }
+
+
+        /* TARJETA PRINCIPAL */
+
+        .card {
+            width: 100%;
+            max-width: 520px;
+
+            background: #fffaf3;
+
+            border-radius: 24px;
+
+            padding: 42px 32px 35px;
+
+            text-align: center;
+
+            box-shadow:
+                0 15px 40px rgba(80, 75, 65, 0.12);
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        /* PEQUEÑO DETALLE */
+
+        .cat {
+            position: absolute;
+
+            top: 18px;
+            right: 22px;
+
+            font-size: 22px;
+
+            opacity: 0.65;
+        }
+
+
+        .hello {
+            font-size: 13px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            color: #9a9b87;
+
+            margin-bottom: 15px;
+        }
+
+
+        h1 {
+            font-family: Georgia, serif;
+
+            font-size: clamp(55px, 15vw, 80px);
+
+            font-weight: normal;
+
+            color: #697b69;
+
+            margin-bottom: 22px;
+        }
+
+
+        h1 span {
+            color: #d99a82;
+        }
+
+
+        .question {
+            font-family: Georgia, serif;
+
+            font-size: clamp(23px, 6vw, 30px);
+
+            line-height: 1.4;
+
+            color: #555a54;
+
+            margin-bottom: 28px;
+        }
+
+
+        .question strong {
+            color: #c98470;
+        }
+
+
+        /* FOTO */
+
+        .photo {
+            width: 100%;
+
+            aspect-ratio: 4 / 3;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            margin-bottom: 25px;
+
+            background: #dce2d7;
+        }
+
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+
+        .message {
+            font-size: 15px;
+
+            line-height: 1.7;
+
+            color: #777b74;
+
+            max-width: 390px;
+
+            margin: 0 auto 28px;
+        }
+
+
+        /* BOTONES */
+
+        .buttons {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 12px;
+
+            width: 100%;
+        }
+
+
+        button {
+            border: none;
+
+            padding: 14px 22px;
+
+            border-radius: 30px;
+
+            font-size: 15px;
+
+            font-family: Arial, sans-serif;
+
+            cursor: pointer;
+
+            transition: transform .2s ease,
+                        box-shadow .2s ease;
+        }
+
+
+        button:active {
+            transform: scale(.96);
+        }
+
+
+        .yes {
+            background: #c9d8c4;
+
+            color: #455344;
+        }
+
+
+        .think {
+            background: #ead3c8;
+
+            color: #72564c;
+        }
+
+
+        button:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 5px 12px rgba(70,70,60,.12);
+        }
+
+
+        /* RESPUESTA */
+
+        #response {
+            display: none;
+
+            margin-top: 25px;
+
+            padding: 20px;
+
+            border-radius: 16px;
+
+            background: #f1e7da;
+
+            animation: appear .35s ease;
+        }
+
+
+        #response h2 {
+            font-family: Georgia, serif;
+
+            font-size: 25px;
+
+            font-weight: normal;
+
+            color: #697b69;
+
+            margin-bottom: 8px;
+        }
+
+
+        #response p {
+            font-size: 14px;
+
+            line-height: 1.6;
+
+            color: #74776f;
+        }
+
+
+        @keyframes appear {
+
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        .small {
+            margin-top: 25px;
+
+            font-size: 11px;
+
+            color: #aaa99e;
+        }
+
+
+        /* CELULAR */
+
+        @media (max-width: 480px) {
+
+            body {
+                padding: 12px;
+            }
+
+
+            .card {
+                padding:
+                    38px
+                    20px
+                    28px;
+
+                border-radius: 20px;
+            }
+
+
+            .cat {
+                top: 14px;
+                right: 16px;
+            }
+
+
+            h1 {
+                font-size: 62px;
+            }
+
+
+            .question {
+                font-size: 23px;
+            }
+
+
+            .photo {
+                border-radius: 15px;
+            }
+
+
+            .message {
+                font-size: 14px;
+            }
+
+
+            .buttons {
+                flex-direction: column;
+
+                max-width: 280px;
+
+                margin: auto;
+            }
+
+
+            button {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <main class="card">
+
+
+        <div class="cat">
+            🐈
+        </div>
+
+
+        <div class="hello">
+            una invitación para ti
+        </div>
+
+
+        <h1>
+            Tefa<span>.</span>
+        </h1>
+
+
+        <div class="question">
+
+            ¿Quisieras ir a hacer
+            <strong>rafting</strong>
+            al río Chilina conmigo
+            el día sábado?
+
+        </div>
+
+
+        <!--
+            FOTO
+
+            Pon aquí tu imagen:
+
+            img/balsa.jpg
+
+            La foto ideal sería una foto
+            de ustedes dos juntos en la balsa.
+        -->
+
+        <div class="photo">
+
+            <img
+                src="img/balsa.jpg"
+                alt="Tefa y yo en la balsa"
+            >
+
+        </div>
+
+
+        <p class="message">
+
+            Pensé que podría ser bonito hacer
+            algo diferente contigo.
+
+            Un poco de aventura, unas risas
+            y pasar un buen rato juntos.
+
+        </p>
+
+
+        <div class="buttons">
+
+            <button
+                class="yes"
+                id="yesButton"
+                type="button"
+            >
+                Sí, vamos ♡
+            </button>
+
+
+            <button
+                class="think"
+                id="thinkButton"
+                type="button"
+            >
+                Déjame pensarlo
+            </button>
+
+        </div>
+
+
+        <div id="response"></div>
+
+
+        <div class="small">
+            hecho para Tefa
+        </div>
+
+
+    </main>
+
+
+    <script>
+
+        const yesButton =
+            document.getElementById("yesButton");
+
+        const thinkButton =
+            document.getElementById("thinkButton");
+
+        const response =
+            document.getElementById("response");
+
+
+        yesButton.addEventListener("click", function () {
+
+            response.style.display = "block";
+
+            response.innerHTML = `
+                <h2>Entonces tenemos una cita ♡</h2>
+                <p>
+                    Me alegra que hayas dicho que sí.
+                    Ahora solo falta esperar al sábado.
+                    Prometo que la vamos a pasar muy bien.
+                </p>
+            `;
+
+            response.scrollIntoView({
+                behavior: "smooth",
+                block: "nearest"
+            });
+
+        });
+
+
+        thinkButton.addEventListener("click", function () {
+
+            response.style.display = "block";
+
+            response.innerHTML = `
+                <h2>Está bien :)</h2>
+                <p>
+                    Piénsalo con calma...
+                    aunque espero que al final
+                    te animes a ir conmigo.
+                </p>
+            `;
+
+            response.scrollIntoView({
+                behavior: "smooth",
+                block: "nearest"
+            });
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>
